@@ -7,12 +7,13 @@ class Navbar extends React.Component {
         return(
             <nav className="nav-wrapper">
                 <div className="container">
-                    <Link to="/" className="brand-logo">Shopping</Link>
+                    <Link to="/" className="brand-logo center">Shopping</Link>
 
                     <ul className="right">
                         <li><Link to="/">Shop</Link></li>
-                        <li>{this.props.itemsCounter}</li> 
-                        <li><Link to="/cart">Items</Link></li>
+                        {this.props.itemsCounter !== null && this.props.itemsCounter > 1
+                        ? <li><Link to="/cart"> {this.props.itemsCounter} Items</Link></li> 
+                        : <li><Link to="/cart"> {this.props.itemsCounter} Item</Link></li>}
                     </ul>
                 </div>
             </nav> 

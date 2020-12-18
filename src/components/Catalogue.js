@@ -25,8 +25,11 @@ class Catalogue extends React.Component {
     
 
         return (
-            <div>
-              { itemList }            
+            <div className="container">
+                <h3 className="center"> Our Products </h3>
+                <div className="box">
+                    { itemList }         
+                </div>   
             </div>
         )
     }
